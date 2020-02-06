@@ -1,0 +1,11 @@
+server:
+  port: 8102 #指定运行的端口
+spring:
+  application:
+    name: eureka-client #指定服务名称
+eureka:
+  client:
+    service-url:
+      defaultZone: http://replica1:8002/eureka/,http://replica1:8002/eureka/ #同时注册到两个注册中心
+    register-with-eureka: true #指定是否要注册到注册中心（注册中心不需要开启）
+    fetch-registry: true #指定是否要从注册中心获取服务（注册中心不需要开启）
