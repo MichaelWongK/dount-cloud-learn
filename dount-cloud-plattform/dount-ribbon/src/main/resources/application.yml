@@ -1,0 +1,13 @@
+server:
+  port: 8301
+spring:
+  application:
+    name: dount-ribbon
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://michael:123456@localhost:8001/eureka/
+service-url:
+  user-service: http://user-service
